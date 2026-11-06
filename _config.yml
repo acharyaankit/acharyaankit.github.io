@@ -1,3 +1,9 @@
 title: Home | In Pursuit...
-permalink: /articles/:title/
+url: "https://acharyaankit.github.io"
+baseurl: ""
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
 markdown: kramdown
+
