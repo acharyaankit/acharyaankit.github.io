@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+
+    <div class="nav-container">
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="#">Articles</a>
+            <a href="#">RSS</a>
+        </nav>
+    </div>
+
+    {{ content }}
+
+    <footer>
+        <p>© Ankit Acharya 2026 - Today | <a href="https://github.com/acharyaankit">Github</a> | <a href="#">Twitter</a></p>
+    </footer>
+
+</body>
+</html>
