@@ -12,7 +12,7 @@
         <ul class="menu">
             <li><a href="{{ '/' | relative_url }}">Home</a></li>
             <li><a href="#">Articles</a></li>
-            <li><a href="#">RSS</a></li>
+            <li><a href="{{ '/index.xml' | relative_url }}">RSS</a></li>
         </ul>
         <hr>
     </nav>
@@ -20,8 +20,12 @@
     {{ content }}
 
     <footer>
+        <!-- Rendering Engines from Reference Source -->
+        <link rel="stylesheet" href="https://jsdelivr.net">
+        <script src="https://jsdelivr.net" defer></script>
+        <script src="https://jsdelivr.net" defer></script>
         <hr>
-        <p>© Ankit Acharya 2026 - Today | <a href="https://github.com">Github</a> | <a href="#">Twitter</a></p>
+        <p>© Ankit Acharya 2026 - Today | <a href="https://github.com/acharyaankit">Github</a> | <a href="#">Twitter</a></p>
     </footer>
 
 </body>
