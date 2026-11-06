@@ -11,6 +11,12 @@ body {
     background-color: #fff;
 }
 
+/* Keep images from overflowing on small screens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Top Horizontal Navigation Menu */
 nav ul.menu {
     list-style-type: none;
