@@ -1,9 +1,17 @@
-title: Home | In Pursuit...
+title: In Pursuit...
+description: Ankit's Learning Space
 url: "https://acharyaankit.github.io"
 baseurl: ""
+markdown: kramdown
+
 collections:
   articles:
     output: true
     permalink: /articles/:title/
-markdown: kramdown
 
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: default
