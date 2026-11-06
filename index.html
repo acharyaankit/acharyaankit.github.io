@@ -11,8 +11,8 @@ title: Home | In Pursuit...
     <li>acharyankit3 [at] gmail.com</li>
 </ul>
 
-<h2>Recent Articles</h2>
-<ul class="article-list">
+<h2 id="recent-articles">Recent Articles</h2>
+<ul>
     {% for post in site.posts %}
     <li>
         <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
@@ -20,4 +20,6 @@ title: Home | In Pursuit...
     </li>
     {% endfor %}
 </ul>
+
+
 
