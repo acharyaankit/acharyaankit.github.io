@@ -1,22 +1,23 @@
 ---
 layout: null
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
+    <title>Home on {{ site.title | xml_escape }}</title>
     <link>{{ '/' | absolute_url }}</link>
-    <description>{{ site.description | xml_escape }}</description>
-    <language>en</language>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <description>Recent content in Home on {{ site.title | xml_escape }}</description>
+    <generator>Jekyll</generator>
+    <language>en-us</language>
+    <lastBuildDate>{{ sorted_articles.first.date | date_to_rfc822 }}</lastBuildDate>
     <atom:link href="{{ '/index.xml' | absolute_url }}" rel="self" type="application/rss+xml"/>
-    {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
-    {% for post in sorted_articles limit: 20 %}
+    {% for post in sorted_articles %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <link>{{ post.url | absolute_url }}</link>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <guid>{{ post.url | absolute_url }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}
