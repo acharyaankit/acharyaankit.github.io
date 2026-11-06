@@ -1,0 +1,23 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ankit | In Pursuit...</title>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <description>Recent content on Ankit's Learning Space</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+    <atom:link href="{{ '/index.xml' | absolute_url }}" rel="self" type="application/rss+xml"/>
+    {% for post in site.articles %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <guid>{{ post.url | absolute_url }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
