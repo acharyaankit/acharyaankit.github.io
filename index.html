@@ -14,7 +14,7 @@ title: Home | In Pursuit...
 <h2 id="recent-articles">Recent Articles</h2>
 <ul>
     {% assign sorted_articles = site.articles | sort: 'date' | reverse %}
-    {% for post in sorted_articles %}
+    {% for post in sorted_articles limit: 5 %}
     <li>
         <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
