@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/index.xml' | relative_url }}">
 </head>
 <body>
 
     <nav>
         <ul class="menu">
             <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="#">Articles</a></li>
+            <li><a href="{{ '/articles/' | relative_url }}">Articles</a></li>
             <li><a href="{{ '/index.xml' | relative_url }}">RSS</a></li>
         </ul>
         <hr>
@@ -20,12 +21,12 @@
     {{ content }}
 
     <footer>
-        <!-- Rendering Engines from Reference Source -->
-        <link rel="stylesheet" href="https://jsdelivr.net">
-        <script src="https://jsdelivr.net" defer></script>
-        <script src="https://jsdelivr.net" defer></script>
         <hr>
-        <p>© Ankit Acharya 2026 - Today | <a href="https://github.com/acharyaankit">Github</a> | <a href="#">Twitter</a></p>
+        <p>© Ankit Acharya {{ 'now' | date: '%Y' }} |
+           <a href="https://github.com/acharyaankit">Github</a>
+           <!-- Add Twitter back with your real URL:
+           | <a href="https://twitter.com/YOURHANDLE">Twitter</a> -->
+        </p>
     </footer>
 
 </body>
