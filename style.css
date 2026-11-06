@@ -1,1 +1,80 @@
 /* Style changes go here */
+/* Universal Page Styles */
+body {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Top Horizontal Navigation Menu */
+nav ul.menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 0 10px 0;
+    display: block;
+}
+nav ul.menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Horizontal Line Dividers */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+/* Typography & Headings */
+h1 {
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    font-weight: bold;
+}
+
+/* Document Hyperlinks */
+a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+a:visited {
+    color: #551a8b;
+}
+a:hover {
+    color: #ff0000;
+}
+
+/* Plain Unordered Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+li {
+    margin-bottom: 5px;
+}
+
+/* Article List Component */
+.date {
+    color: #555;
+    margin-right: 10px;
+}
+
+/* Bottom Footer Structure */
+footer {
+    margin-top: 40px;
+    font-size: 1em;
+}
