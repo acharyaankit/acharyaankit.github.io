@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1 id="ankit">AN.KIT</h1>
+<p>THINK. BUILD. LEAVE A MARK.</p>
+
+<p>You can contact me via:</p>
+<ul>
+    <li>acharyankit3 [at] gmail.com</li>
+</ul>
+
+<h2 id="recent-articles">Recent Articles</h2>
+<ul>
+    {{ range first 5 (where site.RegularPages "Section" "articles") }}
+    <li>
+        <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
