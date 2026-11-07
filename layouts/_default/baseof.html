@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "style.css" | relURL }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "index.xml" | absURL }}">
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="{{ "/" | relURL }}">Home</a></li>
+            <li><a href="{{ "articles/" | relURL }}">Articles</a></li>
+            <li><a href="{{ "index.xml" | relURL }}">RSS</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    {{ block "main" . }}{{ end }}
+
+    <footer>
+        <hr>
+        <p>© Ankit Acharya {{ now.Year }} |
+           <a href="https://github.com/acharyaankit">Github</a>
+        </p>
+    </footer>
+
+</body>
+</html>
