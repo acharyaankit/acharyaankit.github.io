@@ -1,9 +1,9 @@
 /* Universal Page Styles */
 body {
     font-family: Optima, Candara, Calibri, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 756px;
     margin: 20px auto;
     padding: 0 15px;
     color: #000;
@@ -35,7 +35,7 @@ nav ul.menu li {
 nav ul.menu li a {
     display: block;
     background-color: #eee;
-    padding: 6px 10px;
+    padding: 2px 5px;
     text-decoration: none;
 }
 
@@ -48,13 +48,13 @@ hr {
 
 /* Headings */
 h1 {
-    font-size: 2.2em;
-    margin: 0.9em 0 0.7em;
+    font-size: 2em;
+    margin: 0.67em 0;
     font-weight: bold;
 }
 h2 {
-    font-size: 1.6em;
-    margin: 0.9em 0 0.7em;
+    font-size: 1.5em;
+    margin: 0.83em 0;
     font-weight: bold;
 }
 
@@ -66,16 +66,16 @@ a:hover { color: #ff0000; }
 /* Lists */
 ul {
     list-style-type: disc;
-    padding-left: 50px;
+    padding-left: 40px;
     margin-top: 1em;
     margin-bottom: 1em;
 }
-li { margin-bottom: 5px; }
+li { margin-bottom: 0; }
 
 /* Dates (same color as text, like your screenshot) */
 .date {
     color: #000;
-    margin-right: 6px;
+    margin-right: 4px;
 }
 
 /* Centered footer */
