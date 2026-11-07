@@ -1,6 +1,6 @@
 baseURL = "https://acharyaankit.github.io/"
 languageCode = "en-us"
-title = "In Pursuit..."
+title = "Home | In Pursuit..."
 
 [outputs]
   home = ["html", "rss"]
